@@ -1,18 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 import GlobalStyle from './utils/styles/GlobalStyles';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Home from './pages/Home';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <GlobalStyle />
-    <Header />
-    <Footer />
+    <Router>
+      <GlobalStyle />
+      <Header />
+      <Routes>
+        <Route path='/' element={<Home />} />
+      </Routes>
+      <Footer />
+    </Router>
   </React.StrictMode>
 );
 
