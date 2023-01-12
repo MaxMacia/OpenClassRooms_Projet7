@@ -1,5 +1,5 @@
 import { FunctionComponent } from 'react';
-import LOGO from '../../assets/LOGO.svg';
+import LOGO from '../../assets/LOGO-header.svg';
 import { Container, Img, Nav, NavList, NavListItems } from './Header.style';
 
 
