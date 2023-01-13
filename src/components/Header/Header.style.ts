@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { colors } from '../../utils/styles/colors';
+import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
     display: flex;
@@ -34,7 +35,7 @@ export const NavList = styled.ul`
     justify-content: space-between;
 `;
 
-export const NavListItems =styled.li`
+export const NavListItems = styled.li`
     list-style: none;
     font-style: normal;
     font-weight: 500;
@@ -47,4 +48,9 @@ export const NavListItems =styled.li`
         font-size: 12px;
         text-transform: uppercase;
     }
+`;
+
+export const NavLink = styled(Link)`
+    all: unset;
+    cursor: pointer;
 `;

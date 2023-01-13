@@ -16,6 +16,7 @@ const Home = () => {
 				{accomodations.map((accomodation) => (
 					<Card
 						key={accomodation.id}
+						id={accomodation.id}
 						title={accomodation.title}
 						cover={accomodation.cover}
 					/>

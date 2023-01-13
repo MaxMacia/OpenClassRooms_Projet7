@@ -1,6 +1,6 @@
 import jsonAccomodations from './accomodations.json';
 
-type Accomodation = {
+export type Accomodation = {
     id: string;
 	title: string;
 	cover: string;

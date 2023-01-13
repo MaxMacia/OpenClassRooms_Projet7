@@ -1,15 +1,17 @@
-import LOGO from '../../assets/LOGO-header.svg';
-import { Container, Img, Nav, NavList, NavListItems } from './Header.style';
+import logo from '../../assets/LOGO-header.svg';
+import { Container, Img, Nav, NavLink, NavList, NavListItems } from './Header.style';
 
 
 const Header = () => {
 	return (
 		<Container>
-			<Img src={LOGO} alt="Logo kasa" />
+			<Img data-testid="logo-header" src={logo} alt="Logo kasa" />
 			<Nav>
 				<NavList>
 					<NavListItems>
-						Accueil
+						<NavLink to="/">
+							Accueil
+						</NavLink>
 					</NavListItems>
 					<NavListItems>
 						A Propos
