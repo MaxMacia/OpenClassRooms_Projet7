@@ -1,9 +1,8 @@
-import { FunctionComponent } from 'react';
 import LOGO from '../../assets/LOGO-header.svg';
 import { Container, Img, Nav, NavList, NavListItems } from './Header.style';
 
 
-const Header: FunctionComponent = () => {
+const Header = () => {
 	return (
 		<Container>
 			<Img src={LOGO} alt="Logo kasa" />

@@ -1,43 +1,19 @@
-import { FunctionComponent } from "react";
-import Accomodation from "../../models/Accomodation";
-import styled from "styled-components";
-import { colors } from "../../utils/styles/colors";
-
-const Thumb = styled.div`
-    height: 340px;
-    width: 340px;
-    border-radius: 10px;
-    position: relative;
-    margin: auto;
-    margin-top: 20px;
-`;
-
-const Img = styled.img`
-    object-fit: cover;
-    height: 340px;
-    width: 340px;
-    border-radius: 10px;
-`;
-
-const Paragraph = styled.div`
-    position: absolute;
-    z-index: 1;
-    left: 10px;
-    bottom: 25px;
-    font-weight: 500;
-    font-size: 18px;
-    color: ${colors.white};
-`;
+import { Background, Img, Paragraph, Thumb } from "./Card.style";
 
 type Props = {
-    accomodation: Accomodation
+    title: string,
+    cover: string
 };
 
-const Card: FunctionComponent<Props> = ({ accomodation }) => {
+const Card = ({ title, cover }: Props) => {
     return (
-        <Thumb key={accomodation.id}>
-            <Img src={accomodation.cover} alt={`image ${accomodation.title}`} />
-            <Paragraph>{accomodation.title}</Paragraph>
+        <Thumb>
+            <Img
+                src={cover}
+                alt={`image ${title}`}
+            />
+            <Paragraph>{title}</Paragraph>
+            <Background />
         </Thumb>
     );
 };

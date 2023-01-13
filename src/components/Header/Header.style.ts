@@ -36,7 +36,6 @@ export const NavList = styled.ul`
 
 export const NavListItems =styled.li`
     list-style: none;
-    font-family: 'Monserrat';
     font-style: normal;
     font-weight: 500;
     font-size: 24px;

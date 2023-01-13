@@ -1,8 +1,12 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-    #root {
+    body {
         font-family: 'Montserrat', sans-serif;
+        @media (max-width: 336px) {
+            margin: auto;
+            width: 95%;
+        }
     }
 `;
 

@@ -1,4 +1,19 @@
-import Accomodation from './Accomodation';
-import accomodations from './accomodations.json';
+import jsonAccomodations from './accomodations.json';
 
-export const Accomodations: Accomodation[] = JSON.parse(JSON.stringify(accomodations));
+type Accomodation = {
+    id: string;
+	title: string;
+	cover: string;
+	pictures: string[];
+	description: string;
+	host: {
+        name: string,
+        picture: string
+    };
+	rating: string;
+	location: string;
+	equipments: string[];
+    tags: string[];
+};
+
+export const accomodations: Accomodation[] = jsonAccomodations;
