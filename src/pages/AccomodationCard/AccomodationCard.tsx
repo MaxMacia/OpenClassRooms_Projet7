@@ -4,6 +4,7 @@ import { accomodations, Accomodation } from "../../models/accomodations";
 import ImageSlider from "../../components/ImageSlider";
 import Tag from "../../components/Tag";
 import Host from "../../components/Host";
+import Rate from "../../components/Rate";
 import styled from "styled-components";
 import { colors } from "../../utils/styles/colors";
 
@@ -61,7 +62,7 @@ const AccomodationCard = () => {
             </div>
             <div>
                 <Host host={accomodation.host} />
-                <Rating rating={accomodation.rating} />
+                <Rate rating={accomodation.rating} />
             </div>
         </AccomodationCardContainer>
         ) : (<div></div>)}
