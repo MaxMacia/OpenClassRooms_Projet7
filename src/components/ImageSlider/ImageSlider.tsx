@@ -2,6 +2,7 @@ import { useState } from "react";
 import backwardArrow from '../../assets/backward-arrow.svg';
 import forwardArrow from '../../assets/forward-arrow.svg';
 import styled from "styled-components";
+import { colors } from "../../utils/styles/colors";
 
 type Props = {
     slides: string[]
@@ -45,6 +46,15 @@ const ImageSlider = ({ slides }: Props) => {
         cursor: pointer;    
     `;
 
+    const SlideCounter = styled.div`
+        position: absolute;
+        font-size: 18px;
+        top: 90%;
+        right: 50%;
+        color: ${colors.white};
+        z-index: 1;    
+    `;
+
     const goToPrevious = () => {
         const isFirstSlide = currentIndex === 0;
         const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
@@ -61,6 +71,7 @@ const ImageSlider = ({ slides }: Props) => {
         <SliderStyles>
             <BackwardArrow src={backwardArrow} onClick={goToPrevious} />
             <ForwardArrow src={forwardArrow} onClick={goToNext} />
+            <SlideCounter>{currentIndex + 1}/{slides.length}</SlideCounter>
             <SlideStyles />
         </SliderStyles>
     );
