@@ -3,8 +3,8 @@ import { colors } from "../../utils/styles/colors";
 
 const HostContainer = styled.div`
     display: flex;
-    justify-content: space-between;
-    width: 15%;
+    justify-content: flex-start;
+    
 `;
 
 const HostNameWrapper = styled.div`
@@ -12,6 +12,7 @@ const HostNameWrapper = styled.div`
     flex-direction: column;
     height: 100px;
     align-items: flex-end;
+    padding-right: 5px;
 `;
 
 const HostName = styled.p`
@@ -41,7 +42,7 @@ const Host = ({ host }: Props) => {
                 <HostName>{firstName}</HostName>
                 <HostName>{lastName}</HostName>
             </HostNameWrapper>
-        <HostPicture src={host.picture} alt={`${host.name}`} />
+            <HostPicture src={host.picture} alt={`${host.name}`} />
         </HostContainer>
     );
 };

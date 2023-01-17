@@ -1,5 +1,10 @@
 import fullStar from '../../assets/full-star.svg';
 import emptyStar from '../../assets/empty-star.svg';
+import styled from 'styled-components';
+
+const Img = styled.img`
+    margin-left: 2px;
+`;
 
 type Props = {
     rating: string
@@ -13,13 +18,13 @@ const Rate = ({ rating }: Props) => {
         <div>
             {range.map((rangeElt, index) => {
             return ratingNum > rangeElt ? (
-            <img
+            <Img
                 src={fullStar}
                 alt="étoile pleine"
                 key={index}
             />
             ) : (
-            <img
+            <Img
                 src={emptyStar}
                 alt="étoile vide"
                 key={index}

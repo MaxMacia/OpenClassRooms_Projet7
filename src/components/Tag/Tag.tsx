@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { colors } from "../../utils/styles/colors";
 
 const TagStyle = styled.div`
-    width: 115px;
     height: 25px;
     border-radius: 10px;
     background-color: ${colors.primary};
@@ -11,6 +10,11 @@ const TagStyle = styled.div`
     font-weight: 500;
     text-align: center;
     padding-top: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-right: 10px;
+    box-sizing: content-box;
+    cursor: pointer;
 `;
 
 type Props = {

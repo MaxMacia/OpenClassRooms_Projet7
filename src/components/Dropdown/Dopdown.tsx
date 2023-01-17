@@ -4,12 +4,19 @@ import upArrow from '../../assets/up-arrow.svg';
 import styled from 'styled-components';
 import { colors } from '../../utils/styles/colors';
 
+const MainContainer = styled.div`
+	position: relative;
+	width: 45%;
+	height: 310px;
+`;
+
 const HeadingContainer = styled.div<{ accomodation: boolean }>`
 	background-color: ${colors.primary};
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-
+	padding-left: 10px;
+	padding-right: 10px;
 	${props => props.accomodation && `
 		height: 52px;
 		border-radius: 10px;
@@ -30,22 +37,53 @@ const Img = styled.img`
 	cursor: pointer;
 `;
 
+const Children = styled.div<{ accomodation: boolean, isOpen: boolean }>`
+	background-color: ${colors.secondary};
+	color: ${colors.primary};
+	position: absolute;
+	${props => props.accomodation && props.isOpen && `
+		height: 249px;
+		border-radius: 10px;
+		font-size: 18px
+		
+	`}
+`;
+
+const ListChildren =styled.li`
+	list-style: none;
+`;
+
 type Props = {
 	heading: string,
-	children: string
+	accomodation: boolean,
+	children: string|string[]
 };
 
-const Dropdown = ({ heading, children }: Props) => {
+const Dropdown = ({ heading, accomodation, children }: Props) => {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
 
 	const toggleDropdown = () => {
 		setIsOpen(!isOpen);
 	};
 
+	const displayChildren = (children: string|string[]) => {
+		if (typeof children === 'string') {
+			return children;
+		} else {
+			return (<ul>
+				{children.map((child, index) => (
+					<ListChildren key={index}>
+						{child}
+					</ListChildren>
+				))}
+			</ul>);
+		}
+	};
+
 	return (
-		<div>
-			<HeadingContainer accomodation>
-                <Heading accomodation>{heading}</Heading>
+		<MainContainer>
+			<HeadingContainer accomodation={accomodation}>
+                <Heading accomodation={accomodation}>{heading}</Heading>
                 {isOpen ? (
 				<Img
 					src={upArrow}
@@ -60,10 +98,10 @@ const Dropdown = ({ heading, children }: Props) => {
 				/>
 				)}
             </HeadingContainer>
-			<div>
-				{isOpen && children}
-			</div>
-		</div>
+			<Children accomodation={accomodation} isOpen={isOpen}>
+				{isOpen && displayChildren(children)}
+			</Children>
+		</MainContainer>
 	);
 };
 
