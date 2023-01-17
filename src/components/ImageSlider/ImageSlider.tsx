@@ -4,26 +4,21 @@ import forwardArrow from '../../assets/forward-arrow.svg';
 import styled from "styled-components";
 import { colors } from "../../utils/styles/colors";
 
-type Props = {
-    slides: string[]
-};
-
-const ImageSlider = ({ slides }: Props) => {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    
-    const SliderStyles = styled.div`
+const SliderStyles = styled.div`
         width: 100%;
         height: 100%;
         position: relative;
     `;
 
-    const SlideStyles = styled.div`
-        background-image: url(${slides[currentIndex]});
+    const SlideStyles = styled.div<{ slides: string[], currentIndex: number }>`
         width: 100%;
         height: 100%;
         border-radius: 25px;
         background-position: center;
-        background-size: cover
+        background-size: cover;
+        ${props => props.slides && `
+            background-image: url(${props.slides[props.currentIndex]});
+        `}
     `;
 
     const BackwardArrow = styled.img`
@@ -55,6 +50,13 @@ const ImageSlider = ({ slides }: Props) => {
         z-index: 1;    
     `;
 
+type Props = {
+    slides: string[]
+};
+
+const ImageSlider = ({ slides }: Props) => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+    
     const goToPrevious = () => {
         const isFirstSlide = currentIndex === 0;
         const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
@@ -72,7 +74,7 @@ const ImageSlider = ({ slides }: Props) => {
             <BackwardArrow src={backwardArrow} onClick={goToPrevious} />
             <ForwardArrow src={forwardArrow} onClick={goToNext} />
             <SlideCounter>{currentIndex + 1}/{slides.length}</SlideCounter>
-            <SlideStyles />
+            <SlideStyles slides={slides} currentIndex={currentIndex} />
         </SliderStyles>
     );
 };

@@ -11,8 +11,20 @@ const Rate = ({ rating }: Props) => {
     
     return (
         <div>
-            {range.map(rangeElt => {
-            return ratingNum > rangeElt ? (<img src={fullStar} alt="étoile pleine" />) : (<img src={emptyStar} alt="étoile vide" />)
+            {range.map((rangeElt, index) => {
+            return ratingNum > rangeElt ? (
+            <img
+                src={fullStar}
+                alt="étoile pleine"
+                key={index}
+            />
+            ) : (
+            <img
+                src={emptyStar}
+                alt="étoile vide"
+                key={index}
+            />
+            )
             })}
         </div>
     );
