@@ -5,6 +5,7 @@ import ImageSlider from "../../components/ImageSlider";
 import Tag from "../../components/Tag";
 import Host from "../../components/Host";
 import Rate from "../../components/Rate";
+import Dropdown from "../../components/Dropdown";
 import styled from "styled-components";
 import { colors } from "../../utils/styles/colors";
 
@@ -63,6 +64,14 @@ const AccomodationCard = () => {
             <div>
                 <Host host={accomodation.host} />
                 <Rate rating={accomodation.rating} />
+            </div>
+            <div>
+                <Dropdown heading="Description">
+                    children
+                </Dropdown>
+                <Dropdown heading="Equipements">
+                    children
+                </Dropdown>
             </div>
         </AccomodationCardContainer>
         ) : (<div></div>)}
