@@ -14,7 +14,7 @@ describe('Image Slider', () =>{
         expect(forwardArrow).toHaveAttribute('src');
 
         const slideCounter = screen.getByText(/\//);
-        expect(slideCounter).toBeInTheDocument;
+        expect(slideCounter).toBeInTheDocument();
 
         const imageslides = screen.getByTestId('img');
         expect(imageslides).toHaveStyle(`background-image: url(${slides[0]});`);
