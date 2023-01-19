@@ -5,9 +5,10 @@ import styled from 'styled-components';
 import { colors } from '../../utils/styles/colors';
 
 const MainContainer = styled.div`
-	position: relative;
 	width: 45%;
 	height: 310px;
+	margin-top: 20px;
+	margin-bottom: 40px;
 `;
 
 const HeadingContainer = styled.div<{ accomodation: boolean }>`
@@ -17,6 +18,8 @@ const HeadingContainer = styled.div<{ accomodation: boolean }>`
 	align-items: center;
 	padding-left: 10px;
 	padding-right: 10px;
+	position: relative;
+	z-index: 1;
 	${props => props.accomodation && `
 		height: 52px;
 		border-radius: 10px;
@@ -40,23 +43,26 @@ const Img = styled.img`
 const Children = styled.div<{ accomodation: boolean, isOpen: boolean }>`
 	background-color: ${colors.secondary};
 	color: ${colors.primary};
-	position: absolute;
+	padding-top: 40px;
+	padding-left: 20px;
+	padding-right: 20px;
+	transform: translateY(-15px);
 	${props => props.accomodation && props.isOpen && `
 		height: 249px;
 		border-radius: 10px;
 		font-size: 18px
-		
+		width: 100%;	
 	`}
 `;
 
-const ListChildren =styled.li`
-	list-style: none;
+const ChildrenItems = styled.div`
+	padding-bottom: 5px;
 `;
 
 type Props = {
 	heading: string,
 	accomodation: boolean,
-	children: string|string[]
+	children: string | string[]
 };
 
 const Dropdown = ({ heading, accomodation, children }: Props) => {
@@ -66,17 +72,23 @@ const Dropdown = ({ heading, accomodation, children }: Props) => {
 		setIsOpen(!isOpen);
 	};
 
-	const displayChildren = (children: string|string[]) => {
+	const displayChildren = (children: string | string[]) => {
 		if (typeof children === 'string') {
-			return children;
+			return (
+				<div>
+					{children}
+				</div>
+				);
 		} else {
-			return (<ul>
+			return (
+			<div>
 				{children.map((child, index) => (
-					<ListChildren key={index}>
+					<ChildrenItems key={index}>
 						{child}
-					</ListChildren>
+					</ChildrenItems>
 				))}
-			</ul>);
+			</div>
+			);
 		}
 	};
 
