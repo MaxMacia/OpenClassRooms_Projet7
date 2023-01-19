@@ -1,17 +1,6 @@
 import fullStar from '../../assets/full-star.svg';
 import emptyStar from '../../assets/empty-star.svg';
-import styled from 'styled-components';
-
-const StarContainer = styled.div`
-    display: flex;
-`;
-
-const Img = styled.img`
-    margin-left: 2px;
-    @media (max-width: 336px) {
-        height: 15px;
-    }
-`;
+import { Img, StarContainer } from './Rate.style';
 
 type Props = {
     rating: string
