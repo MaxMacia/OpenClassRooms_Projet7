@@ -4,7 +4,9 @@ import { colors } from "../../utils/styles/colors";
 const HostContainer = styled.div`
     display: flex;
     justify-content: flex-start;
-    
+    @media (max-width: 336px) {
+        align-items: center;
+    }
 `;
 
 const HostNameWrapper = styled.div`
@@ -13,6 +15,9 @@ const HostNameWrapper = styled.div`
     height: 100px;
     align-items: flex-end;
     padding-right: 5px;
+    @media (max-width: 336px) {
+        justify-content: center;
+    }
 `;
 
 const HostName = styled.p`
@@ -21,11 +26,20 @@ const HostName = styled.p`
     color: ${colors.primary};
     font-size: 18px;
     font-weight: 500;
+    @media (max-width: 336px) {
+        font-size: 12px;
+        display: block;
+        height: 20%;
+    }
 `;
 
 const HostPicture = styled.img`
     height: 64px;
     border-radius: 64px;
+    @media (max-width: 336px) {
+        height: 32px;
+        margin-bottom: 5px;
+    }
 `;
 
 type Props = {

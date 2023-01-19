@@ -19,6 +19,9 @@ const SliderStyles = styled.div`
         ${props => props.slides && `
             background-image: url(${props.slides[props.currentIndex]});
         `}
+        @media (max-width: 336px) {
+        border-radius: 10px;
+        }
     `;
 
     const BackwardArrow = styled.img`
@@ -29,6 +32,10 @@ const SliderStyles = styled.div`
         transform: translate(0, -50%);
         z-index: 1;
         cursor: pointer;
+        @media (max-width: 336px) {
+        height: 19.8px;
+        left: 5px;
+        }
     `;
 
     const ForwardArrow = styled.img`
@@ -38,7 +45,11 @@ const SliderStyles = styled.div`
         right: 32px;
         transform: translate(0, -50%);
         z-index: 1;
-        cursor: pointer;    
+        cursor: pointer;
+        @media (max-width: 336px) {
+        height: 19.8px;
+        right: 5px;
+        }    
     `;
 
     const SlideCounter = styled.div`
@@ -47,7 +58,10 @@ const SliderStyles = styled.div`
         top: 90%;
         right: 50%;
         color: ${colors.white};
-        z-index: 1;    
+        z-index: 1;
+        @media (max-width: 336px) {
+            display: none;
+        }    
     `;
 
 type Props = {

@@ -33,6 +33,9 @@ export const Nav = styled.nav`
 export const NavList = styled.ul`
     display: flex;
     justify-content: space-between;
+    @media (max-width: 335px) {
+        padding-left: 27px;
+    }
 `;
 
 export const NavListItems = styled.li`
@@ -47,6 +50,7 @@ export const NavListItems = styled.li`
     @media (max-width: 336px) {
         font-size: 12px;
         text-transform: uppercase;
+        
     }
 `;
 

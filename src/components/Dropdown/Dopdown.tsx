@@ -6,9 +6,14 @@ import { colors } from '../../utils/styles/colors';
 
 const MainContainer = styled.div`
 	width: 45%;
-	height: 310px;
+	height: fit-content;
 	margin-top: 20px;
 	margin-bottom: 40px;
+	@media (max-width: 336px) {
+		width: 100%;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
 `;
 
 const HeadingContainer = styled.div<{ accomodation: boolean }>`
@@ -24,6 +29,12 @@ const HeadingContainer = styled.div<{ accomodation: boolean }>`
 		height: 52px;
 		border-radius: 10px;
 	`}
+	@media (max-width: 336px) {
+		${props => props.accomodation && `
+		height: 29.93px;
+		border-radius: 5px;
+	`}
+	}
 `;
 
 const Heading = styled.h2<{ accomodation: boolean }>`
@@ -32,27 +43,44 @@ const Heading = styled.h2<{ accomodation: boolean }>`
 	${props => props.accomodation && `
 		font-size: 18px;
 	`}
+	@media (max-width: 336px) {
+		${props => props.accomodation && `
+		font-size: 13px;
+	`}
+	}
+	
 `;
 
 const Img = styled.img`
 	height: 26.4px;
 	width: 15.56px;
 	cursor: pointer;
+	@media (max-width: 336px) {
+		height: 15.2px;
+		width: 8.96px;
+	}
 `;
 
 const Children = styled.div<{ accomodation: boolean, isOpen: boolean }>`
-	background-color: ${colors.secondary};
-	color: ${colors.primary};
-	padding-top: 40px;
-	padding-left: 20px;
-	padding-right: 20px;
-	transform: translateY(-15px);
 	${props => props.accomodation && props.isOpen && `
+		background-color: ${colors.secondary};
+		color: ${colors.primary};
+		padding-top: 40px;
+		padding-left: 20px;
+		padding-right: 20px;
+		transform: translateY(-15px);
 		height: 249px;
 		border-radius: 10px;
 		font-size: 18px
 		width: 100%;	
 	`}
+	@media (max-width: 336px) {
+		${props => props.accomodation && props.isOpen && `
+		font-size: 12px;
+		height: fit-content;
+		padding-bottom: 30px;
+	`}
+	}
 `;
 
 const ChildrenItems = styled.div`

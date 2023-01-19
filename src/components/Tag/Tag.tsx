@@ -15,6 +15,10 @@ const TagStyle = styled.div`
     margin-right: 10px;
     box-sizing: content-box;
     cursor: pointer;
+    @media (max-width: 336px) {
+        height: 18px;
+        padding-bottom: 5px;
+    }
 `;
 
 type Props = {

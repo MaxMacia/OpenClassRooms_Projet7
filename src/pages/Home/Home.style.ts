@@ -80,6 +80,7 @@ export const Gallery = styled.div`
     @media (max-width: 336px) {
         flex-wrap: nowrap;
         flex-direction: column;
+        margin-top: 20px;
         padding-left: 0;
         padding-right: 0px;
         padding-top: 0px;

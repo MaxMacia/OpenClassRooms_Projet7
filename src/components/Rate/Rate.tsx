@@ -2,8 +2,15 @@ import fullStar from '../../assets/full-star.svg';
 import emptyStar from '../../assets/empty-star.svg';
 import styled from 'styled-components';
 
+const StarContainer = styled.div`
+    display: flex;
+`;
+
 const Img = styled.img`
     margin-left: 2px;
+    @media (max-width: 336px) {
+        height: 15px;
+    }
 `;
 
 type Props = {
@@ -15,7 +22,7 @@ const Rate = ({ rating }: Props) => {
     const range = [1, 2, 3, 4, 5];
     
     return (
-        <div>
+        <StarContainer>
             {range.map((rangeElt, index) => {
             return ratingNum > rangeElt ? (
             <Img
@@ -31,7 +38,7 @@ const Rate = ({ rating }: Props) => {
             />
             )
             })}
-        </div>
+        </StarContainer>
     );
 };
 
