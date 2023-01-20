@@ -12,8 +12,8 @@ describe('Header', () => {
 		const logo = screen.getByRole('img');
 		const accueil = screen.getByText('Accueil');
 		const aPropos = screen.getByText('A Propos');
-		expect(logo).toBeTruthy();
-		expect(accueil).toBeTruthy();
+		expect(logo).toBeInTheDocument();
+		expect(accueil).toHaveAttribute('href', '/');
 		expect(aPropos).toBeTruthy();
 	});
 });
