@@ -7,6 +7,7 @@ import Host from "../../components/Host";
 import Rate from "../../components/Rate";
 import Dropdown from "../../components/Dropdown";
 import { AccomodationCardContainer, DropdownContainer, HostContainer, ImageSliderContainer, Location, MainBlock, TagContainer, Title, TitleContainer } from "./AccomodationCard.style";
+import NotFound from "../NotFound";
 
 const AccomodationCard = () => {
     const params = useParams();
@@ -52,7 +53,7 @@ const AccomodationCard = () => {
                 </Dropdown>
             </DropdownContainer>
         </AccomodationCardContainer>
-        ) : (<div></div>)}
+        ) : (<NotFound />)}
     </div>);
 };
 
