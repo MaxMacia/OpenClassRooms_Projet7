@@ -6,7 +6,7 @@ import Rate from "./Rate";
 
 describe('Rate', () => {
     it('Should render full stars and empty stars', () => {
-        const rating = accomodations[0].rating;
+        const { rating } = accomodations[0];
         render(<Rate rating={rating} />);
 
         const fullStar = screen.getAllByAltText('étoile pleine')[0];

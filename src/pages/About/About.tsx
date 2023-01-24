@@ -1,4 +1,5 @@
 import bannerImg from "../../assets/banner-IMG-about.jpg";
+import bannerImgMin from "../../assets/banner-IMG-about-min.jpg";
 import styled from "styled-components";
 import { colors } from "../../utils/styles/colors";
 import Dropdown from "../../components/Dropdown";
@@ -24,6 +25,9 @@ const BackgroundImg = styled.div`
     width: 100%;
     border-radius: 25px;
     background-image: url(${bannerImg});
+    @media (max-width: 336px) {
+        background-image: url(${bannerImgMin});
+    }
 `;
 
 const BackgroundColor = styled.div`

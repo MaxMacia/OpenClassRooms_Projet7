@@ -4,7 +4,7 @@ import Host from "./Host";
 
 describe('Host', () => {
     it('Should render the name and the picture of the host', () => {
-        const host = accomodations[0].host;
+        const { host } = accomodations[0];
         render(<Host host={host}/>);
 
         const firstName = screen.getByText('Nathalie');

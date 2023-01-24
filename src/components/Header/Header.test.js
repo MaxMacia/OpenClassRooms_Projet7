@@ -9,11 +9,14 @@ describe('Header', () => {
 			<Header />
 		</MemoryRouter>
 		);
+		
 		const logo = screen.getByRole('img');
-		const accueil = screen.getByText('Accueil');
-		const aPropos = screen.getByText('A Propos');
 		expect(logo).toBeInTheDocument();
+		
+		const accueil = screen.getByText('Accueil');
 		expect(accueil).toHaveAttribute('href', '/');
-		expect(aPropos).toBeTruthy();
+		
+		const aPropos = screen.getByText('A Propos');
+		expect(aPropos).toHaveAttribute('href', '/about');
 	});
 });

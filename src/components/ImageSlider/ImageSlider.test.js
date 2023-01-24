@@ -1,5 +1,7 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { accomodations } from "../../models/accomodations";
+import backwardArrowImg from "../../assets/backward-arrow.svg";
+import forwardArrowImg from "../../assets/forward-arrow.svg";
 import ImageSlider from "./ImageSlider";
 
 describe('Image Slider', () =>{
@@ -8,10 +10,10 @@ describe('Image Slider', () =>{
         render(<ImageSlider slides={slides} />);
         
         const backwardArrow = screen.getByAltText('backward arrow');
-        expect(backwardArrow).toHaveAttribute('src');
+        expect(backwardArrow).toHaveAttribute('src', backwardArrowImg);
         
         const forwardArrow = screen.getByAltText('forward arrow');
-        expect(forwardArrow).toHaveAttribute('src');
+        expect(forwardArrow).toHaveAttribute('src', forwardArrowImg);
 
         const slideCounter = screen.getByText(/\//);
         expect(slideCounter).toBeInTheDocument();
