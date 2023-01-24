@@ -4,7 +4,7 @@ import { colors } from '../../utils/styles/colors';
 export const MainContainer = styled.div`
 	height: fit-content;
 	margin-top: 20px;
-	margin-bottom: 40px;
+	margin-bottom: 30px;
 	@media (max-width: 336px) {
 		width: 100%;
 		margin-top: 10px;
@@ -58,17 +58,22 @@ export const Children = styled.div<{ isOpen: boolean, fixedHeight: boolean }>`
 		padding-right: 20px;
 		transform: translateY(-15px);
 		border-radius: 10px;
-		font-size: 18px
-		width: 100%;	
+		font-size: 18px;	
 	`}
 	${props => props.isOpen && props.fixedHeight && `
 		height: 249px;
 	`}
 	${props => props.isOpen && !props.fixedHeight && `
 		height: fit-content;
+		padding-bottom: 30px;
 	`}
 	@media (max-width: 336px) {
-		${props => props.isOpen && props.fixedHeight && `
+		${props => props.isOpen && props.fixedHeight && !props.fixedHeight && `
+		font-size: 12px;
+		height: fit-content;
+		padding-bottom: 30px;
+	`}
+		${props => props.isOpen && !props.fixedHeight && `
 		font-size: 12px;
 		height: fit-content;
 		padding-bottom: 30px;
