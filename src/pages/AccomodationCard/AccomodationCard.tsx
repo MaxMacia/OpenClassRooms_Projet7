@@ -6,7 +6,7 @@ import Tag from "../../components/Tag";
 import Host from "../../components/Host";
 import Rate from "../../components/Rate";
 import Dropdown from "../../components/Dropdown";
-import { AccomodationCardContainer, DropdownContainer, HostContainer, ImageSliderContainer, Location, MainBlock, TagContainer, Title, TitleContainer } from "./AccomodationCard.style";
+import { AccomodationCardContainer, DropdownContainer, DropdownWrapper, HostContainer, ImageSliderContainer, Location, MainBlock, TagContainer, Title, TitleContainer } from "./AccomodationCard.style";
 import NotFound from "../NotFound";
 
 const AccomodationCard = () => {
@@ -41,16 +41,20 @@ const AccomodationCard = () => {
                 </TitleContainer>
                 <HostContainer>
                     <Host host={accomodation.host} />
-                    <Rate rating={accomodation.rating} />
+                    <Rate rating={parseInt(accomodation.rating)} />
                 </HostContainer>
             </MainBlock>
             <DropdownContainer>
-                <Dropdown heading="Description" accomodation>
-                    {accomodation.description}
-                </Dropdown>
-                <Dropdown heading="Equipements" accomodation>
-                    {accomodation.equipments}
-                </Dropdown>
+                <DropdownWrapper>
+                    <Dropdown heading="Description" fixedHeight>
+                        {accomodation.description}
+                    </Dropdown>
+                </DropdownWrapper>
+                <DropdownWrapper>
+                    <Dropdown heading="Equipements" fixedHeight>
+                        {accomodation.equipments}
+                    </Dropdown>
+                </DropdownWrapper>
             </DropdownContainer>
         </AccomodationCardContainer>
         ) : (<NotFound />)}

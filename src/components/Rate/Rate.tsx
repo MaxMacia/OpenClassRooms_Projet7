@@ -3,17 +3,16 @@ import emptyStar from '../../assets/empty-star.svg';
 import { Img, StarContainer } from './Rate.style';
 
 type Props = {
-    rating: string
+    rating: number
 };
 
 const Rate = ({ rating }: Props) => {
-    const ratingNum = parseInt(rating);
     const range = [1, 2, 3, 4, 5];
     
     return (
         <StarContainer>
             {range.map((rangeElt, index) => {
-            return ratingNum > rangeElt ? (
+            return rating > rangeElt ? (
             <Img
                 src={fullStar}
                 alt="étoile pleine"

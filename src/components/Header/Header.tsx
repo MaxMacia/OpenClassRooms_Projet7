@@ -14,7 +14,9 @@ const Header = () => {
 						</NavLink>
 					</NavListItems>
 					<NavListItems>
-						A Propos
+						<NavLink to="/about">
+							A Propos
+						</NavLink>
 					</NavListItems>
 				</NavList>
 			</Nav>

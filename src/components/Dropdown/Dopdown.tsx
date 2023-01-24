@@ -3,13 +3,13 @@ import downArrow from '../../assets/down-arrow.svg';
 import upArrow from '../../assets/up-arrow.svg';
 import { Children, ChildrenItems, Heading, HeadingContainer, Img, MainContainer } from './Dropdown.style';
 
-type Props = {
+export type Props = {
 	heading: string,
-	accomodation: boolean,
+	fixedHeight: boolean,
 	children: string | string[]
 };
 
-const Dropdown = ({ heading, accomodation, children }: Props) => {
+const Dropdown = ({ heading, fixedHeight, children }: Props) => {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
 
 	const toggleDropdown = () => {
@@ -38,8 +38,8 @@ const Dropdown = ({ heading, accomodation, children }: Props) => {
 
 	return (
 		<MainContainer>
-			<HeadingContainer accomodation={accomodation}>
-                <Heading accomodation={accomodation}>{heading}</Heading>
+			<HeadingContainer>
+                <Heading>{heading}</Heading>
                 {isOpen ? (
 				<Img
 					src={upArrow}
@@ -54,7 +54,7 @@ const Dropdown = ({ heading, accomodation, children }: Props) => {
 				/>
 				)}
             </HeadingContainer>
-			<Children accomodation={accomodation} isOpen={isOpen}>
+			<Children isOpen={isOpen} fixedHeight={fixedHeight}>
 				{isOpen && displayChildren(children)}
 			</Children>
 		</MainContainer>

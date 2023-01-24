@@ -85,3 +85,10 @@ export const DropdownContainer = styled.div`
         flex-direction: column;
     }
 `;
+
+export const DropdownWrapper = styled.div`
+    width: 45%;
+    @media (max-width: 336px) {
+        width: 100%;
+    }
+`;
