@@ -1,57 +1,11 @@
-import bannerImg from "../../assets/banner-IMG-about.jpg";
-import bannerImgMin from "../../assets/banner-IMG-about-min.jpg";
-import styled from "styled-components";
-import { colors } from "../../utils/styles/colors";
 import Dropdown from "../../components/Dropdown";
-
-const Body = styled.div`
-    width: 85%;
-    margin: auto;
-    @media (max-width: 336px) {
-        width: 100%;
-    }
-`;
-
-const Section = styled.div`
-    position: relative;
-    height: 223px;
-    border-radius: 25px;
-    margin-bottom: 30px;
-`;
-
-const BackgroundImg = styled.div`
-    position: absolute;
-    height: 223px;
-    width: 100%;
-    border-radius: 25px;
-    background-image: url(${bannerImg});
-    @media (max-width: 336px) {
-        background-image: url(${bannerImgMin});
-    }
-`;
-
-const BackgroundColor = styled.div`
-    position: absolute;
-    height: 223px;
-    width: 100%;
-    border-radius: 25px;
-    background-color: ${colors.black};
-    opacity: 30%;
-`;
-
-const DropdownContainer = styled.div`
-    width: 80%;
-    margin: auto;
-    @media (max-width: 336px) {
-        width: 100%;
-    }
-`;
+import { Body, Section, BackgroundImg, BackgroundColor, DropdownContainer } from "./About.style";
 
 const About = () => {
     return (
         <Body>
             <Section>
-                <BackgroundImg />
+                <BackgroundImg data-testid="img" />
                 <BackgroundColor />
             </Section>
             <DropdownContainer>
