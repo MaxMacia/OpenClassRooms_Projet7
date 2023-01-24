@@ -12,7 +12,6 @@ import NotFound from "../NotFound";
 const AccomodationCard = () => {
     const params = useParams();
     const [accomodation, setAccomodation] = useState<Accomodation | null>(null);
-
     useEffect(() => {
         accomodations.forEach((accomodation) => {
             if (params.id === accomodation.id) {

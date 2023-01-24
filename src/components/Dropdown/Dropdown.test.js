@@ -1,5 +1,7 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import { accomodations } from "../../models/accomodations";
+import downArrowImg from "../../assets/down-arrow.svg";
+import upArrowImg from "../../assets/up-arrow.svg";
 import Dropdown from "./Dopdown";
 
 describe('Dropdown', () => {
@@ -11,7 +13,7 @@ describe('Dropdown', () => {
         expect(heading).toBeInTheDocument();
 
         const downArrow = screen.getByAltText('flèche vers le bas');
-        expect(downArrow).toBeInTheDocument();
+        expect(downArrow).toHaveAttribute('src', downArrowImg);
         
         fireEvent.click(downArrow);
         
@@ -19,7 +21,7 @@ describe('Dropdown', () => {
         expect(textDescription).toBeInTheDocument;
 
         const upArrow = screen.getByAltText('flèche vers le haut');
-        expect(upArrow).toBeInTheDocument();
+        expect(upArrow).toHaveAttribute('src', upArrowImg);
     });
     it('Should render a heading, a down arrow, and on click an up arrow and Equipments', () => {
         const equipments = accomodations[0].equipments;
@@ -29,7 +31,7 @@ describe('Dropdown', () => {
         expect(heading).toBeInTheDocument();
 
         const downArrow = screen.getByAltText('flèche vers le bas');
-        expect(downArrow).toBeInTheDocument();
+        expect(downArrow).toHaveAttribute('src', downArrowImg);
         
         fireEvent.click(downArrow);
         
@@ -37,6 +39,6 @@ describe('Dropdown', () => {
         expect(textDescription).toBeInTheDocument;
 
         const upArrow = screen.getByAltText('flèche vers le haut');
-        expect(upArrow).toBeInTheDocument();
+        expect(upArrow).toHaveAttribute('src', upArrowImg);
     });
 });

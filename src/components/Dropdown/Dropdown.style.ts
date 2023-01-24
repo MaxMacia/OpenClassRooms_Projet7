@@ -68,15 +68,13 @@ export const Children = styled.div<{ isOpen: boolean, fixedHeight: boolean }>`
 		padding-bottom: 30px;
 	`}
 	@media (max-width: 336px) {
-		${props => props.isOpen && props.fixedHeight && !props.fixedHeight && `
+		${props => props.isOpen && props.fixedHeight && `
 		font-size: 12px;
 		height: fit-content;
 		padding-bottom: 30px;
 	`}
 		${props => props.isOpen && !props.fixedHeight && `
 		font-size: 12px;
-		height: fit-content;
-		padding-bottom: 30px;
 	`}
 	}
 `;
