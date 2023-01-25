@@ -6,7 +6,7 @@ import GlobalStyle from './utils/styles/GlobalStyles';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
-import AccomodationCard from './pages/AccomodationCard';
+import AccomodationCard from './pages/Accomodation';
 import About from './pages/About';
 
 const root = ReactDOM.createRoot(

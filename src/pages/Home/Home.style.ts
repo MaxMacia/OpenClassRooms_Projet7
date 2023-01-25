@@ -67,6 +67,13 @@ export const Heading = styled.div`
     }
 `;
 
+export const BreakLine = styled.br`
+    display: none;
+    @media (max-width: 336px) {
+        display: initial;
+    }
+`;
+
 export const Gallery = styled.div`
     background-color: ${colors.secondary};
     border-radius: 25px;
@@ -74,9 +81,10 @@ export const Gallery = styled.div`
     display: flex;
     flex-wrap: wrap;
     margin-top: 50px;
+    margin-bottom: 50px;
     padding-left: 20px;
     padding-right: 20px;
-    padding-top: 30px;
+    padding-top: 50px;
     @media (max-width: 336px) {
         flex-wrap: nowrap;
         flex-direction: column;

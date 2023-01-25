@@ -3,19 +3,19 @@ import { MemoryRouter, useParams } from "react-router-dom";
 import fullStarImg from '../../assets/full-star.svg';
 import emptyStarImg from '../../assets/empty-star.svg';
 import downArrowImg from "../../assets/down-arrow.svg";
-import AccomodationCard from "./AccomodationCard";
+import Accomodation from "./Accomodation";
 
 jest.mock("react-router-dom", () => ({
     ...jest.requireActual("react-router-dom"),
     useParams: jest.fn(),
 }));
 
-describe('Accomodation card', () => {
+describe('Accomodation', () => {
     it('Should render a title, a subtitle, tags, a host name, a host picture, rating stars, and dropdowns', () => {
        useParams.mockReturnValue({ id: 'c67ab8a7' });
         render(
             <MemoryRouter>
-                <AccomodationCard />
+                <Accomodation />
             </MemoryRouter>
         );
         
@@ -53,7 +53,7 @@ describe('Accomodation card', () => {
         useParams.mockReturnValue({ id: '0' });
         render(
             <MemoryRouter>
-                <AccomodationCard />
+                <Accomodation />
             </MemoryRouter>
         );
 

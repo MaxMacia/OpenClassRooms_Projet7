@@ -6,7 +6,7 @@ import Tag from "../../components/Tag";
 import Host from "../../components/Host";
 import Rate from "../../components/Rate";
 import Dropdown from "../../components/Dropdown";
-import { AccomodationCardContainer, DropdownContainer, DropdownWrapper, HostContainer, ImageSliderContainer, Location, MainBlock, TagContainer, Title, TitleContainer } from "./AccomodationCard.style";
+import { AccomodationCardContainer, DropdownContainer, DropdownWrapper, HostContainer, ImageSliderContainer, Location, MainBlock, TagContainer, Title, TitleContainer } from "./Accomodation.style";
 import NotFound from "../NotFound";
 
 const AccomodationCard = () => {
