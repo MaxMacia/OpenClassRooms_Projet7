@@ -6,8 +6,9 @@ import GlobalStyle from './utils/styles/GlobalStyles';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
-import AccomodationCard from './pages/Accomodation';
+import Accomodation from './pages/Accomodation';
 import About from './pages/About';
+import NotFound from './pages/NotFound';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -19,8 +20,9 @@ root.render(
       <Header />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/:id' element={<AccomodationCard />} />
+        <Route path='/:id' element={<Accomodation />} />
         <Route path='/about' element={<About />} />
+        <Route path='/*' element={<NotFound />} />
       </Routes>
       <Footer />
     </Router>

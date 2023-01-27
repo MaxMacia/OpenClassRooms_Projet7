@@ -9,9 +9,10 @@ import Dropdown from "../../components/Dropdown";
 import { AccomodationCardContainer, DropdownContainer, DropdownWrapper, HostContainer, ImageSliderContainer, Location, MainBlock, TagContainer, Title, TitleContainer } from "./Accomodation.style";
 import NotFound from "../NotFound";
 
-const AccomodationCard = () => {
+const AccomodationPage = () => {
     const params = useParams();
     const [accomodation, setAccomodation] = useState<Accomodation | null>(null);
+    
     useEffect(() => {
         accomodations.forEach((accomodation) => {
             if (params.id === accomodation.id) {
@@ -60,4 +61,4 @@ const AccomodationCard = () => {
     </div>);
 };
 
-export default AccomodationCard;
+export default AccomodationPage;

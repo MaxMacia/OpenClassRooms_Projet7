@@ -18,9 +18,10 @@ describe('Dropdown', () => {
         fireEvent.click(downArrow);
         
         const textDescription = screen.getByText(/Votre/);
-        expect(textDescription).toBeInTheDocument;
+        expect(textDescription).toBeInTheDocument();
 
         const upArrow = screen.getByAltText('flèche vers le haut');
         expect(upArrow).toHaveAttribute('src', upArrowImg);
     });
 });
+

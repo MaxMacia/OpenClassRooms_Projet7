@@ -3,7 +3,7 @@ import downArrow from '../../assets/down-arrow.svg';
 import upArrow from '../../assets/up-arrow.svg';
 import { Children, ChildrenItems, Heading, HeadingContainer, Img, MainContainer } from './Dropdown.style';
 
-export type Props = {
+type Props = {
 	heading: string,
 	fixedHeight: boolean,
 	children: string | string[]
