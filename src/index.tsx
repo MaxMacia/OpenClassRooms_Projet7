@@ -19,9 +19,9 @@ root.render(
       <GlobalStyle />
       <Header />
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/:id' element={<Accomodation />} />
-        <Route path='/about' element={<About />} />
+        <Route path='/OpenClassRooms_Projet7' element={<Home />} />
+        <Route path='/OpenClassRooms_Projet7/:id' element={<Accomodation />} />
+        <Route path='/OpenClassRooms_Projet7/about' element={<About />} />
         <Route path='/*' element={<NotFound />} />
       </Routes>
       <Footer />
