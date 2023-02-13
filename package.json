@@ -1,7 +1,7 @@
 {
   "name": "kasa",
   "version": "0.1.0",
-  "homepage": "https://github.com/MaxMacia/OpenClassRooms_Projet7",
+  "homepage": "https://maxmacia.github.io/OpenClassRooms_Projet7/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
