@@ -22,7 +22,7 @@ root.render(
         <Route path='/OpenClassRooms_Projet7' element={<Home />} />
         <Route path='/OpenClassRooms_Projet7/:id' element={<Accomodation />} />
         <Route path='/OpenClassRooms_Projet7/about' element={<About />} />
-        <Route path='/*' element={<NotFound />} />
+        <Route path='/OpenClassRooms_Projet7/*' element={<NotFound />} />
       </Routes>
       <Footer />
     </Router>
