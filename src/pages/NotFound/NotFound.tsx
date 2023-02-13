@@ -7,7 +7,7 @@ const NotFound = () => {
                 <Error404>404</Error404>
                 <Title>Oups! La page que vous demandez n'existe pas.</Title>
             </TitleContainer>
-            <StyledLink to='/'>Retourner sur la page d'accueil</StyledLink>
+            <StyledLink to='/OpenClassRooms_Projet7'>Retourner sur la page d'accueil</StyledLink>
         </Container>
     );
 };
