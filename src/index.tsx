@@ -19,6 +19,7 @@ root.render(
       <GlobalStyle />
       <Header />
       <Routes>
+        <Route path='/MaxMacia/OpenClassRooms_Projet7' element={<Home />} />
         <Route path='/' element={<Home />} />
         <Route path='/:id' element={<Accomodation />} />
         <Route path='/about' element={<About />} />
