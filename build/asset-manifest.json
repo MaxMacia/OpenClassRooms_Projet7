@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.js": "/MaxMacia/OpenClassRooms_Projet7/static/js/main.9b7ccce6.js",
+    "static/js/787.0ce615c0.chunk.js": "/MaxMacia/OpenClassRooms_Projet7/static/js/787.0ce615c0.chunk.js",
+    "static/media/banner-IMG-about.jpg": "/MaxMacia/OpenClassRooms_Projet7/static/media/banner-IMG-about.4560e2e486a529cb6bf2.jpg",
+    "static/media/banner-IMG.jpg": "/MaxMacia/OpenClassRooms_Projet7/static/media/banner-IMG.b821a36071d308a1cdeb.jpg",
+    "static/media/banner-IMG-about-min.jpg": "/MaxMacia/OpenClassRooms_Projet7/static/media/banner-IMG-about-min.919ee7f05e7d11a662f3.jpg",
+    "static/media/banner-IMG-min.jpg": "/MaxMacia/OpenClassRooms_Projet7/static/media/banner-IMG-min.9eec1da05ce8ff86ae9d.jpg",
+    "static/media/LOGO-header.svg": "/MaxMacia/OpenClassRooms_Projet7/static/media/LOGO-header.a6101328193bb3191cbcb50c120ec0d1.svg",
+    "static/media/LOGO-footer.svg": "/MaxMacia/OpenClassRooms_Projet7/static/media/LOGO-footer.ee689fd9409d1b5a898b4247819d8a00.svg",
+    "index.html": "/MaxMacia/OpenClassRooms_Projet7/index.html",
+    "static/media/down-arrow.svg": "/MaxMacia/OpenClassRooms_Projet7/static/media/down-arrow.f2cfcc76f4ae2f55ee699fe243dba350.svg",
+    "static/media/backward-arrow.svg": "/MaxMacia/OpenClassRooms_Projet7/static/media/backward-arrow.f114b3d36e56c8c217832ad98a63d472.svg",
+    "static/media/up-arrow.svg": "/MaxMacia/OpenClassRooms_Projet7/static/media/up-arrow.b493ffa8d213273ee575457aae023b70.svg",
+    "static/media/forward-arrow.svg": "/MaxMacia/OpenClassRooms_Projet7/static/media/forward-arrow.8d9545cb18f67cea4ffddb888aa4dcb0.svg",
+    "static/media/empty-star.svg": "/MaxMacia/OpenClassRooms_Projet7/static/media/empty-star.7e4ba6032d7d80ecc30aa389973cef95.svg",
+    "static/media/full-star.svg": "/MaxMacia/OpenClassRooms_Projet7/static/media/full-star.6430150c126a3adf92c132c52c9c7428.svg",
+    "main.9b7ccce6.js.map": "/MaxMacia/OpenClassRooms_Projet7/static/js/main.9b7ccce6.js.map",
+    "787.0ce615c0.chunk.js.map": "/MaxMacia/OpenClassRooms_Projet7/static/js/787.0ce615c0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.9b7ccce6.js"
+  ]
+}
