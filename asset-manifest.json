@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/OpenClassRooms_Projet7/static/js/main.8ba45325.js",
+    "main.js": "/OpenClassRooms_Projet7/static/js/main.72c3e2a9.js",
     "static/js/787.0ce615c0.chunk.js": "/OpenClassRooms_Projet7/static/js/787.0ce615c0.chunk.js",
     "static/media/banner-IMG-about.jpg": "/OpenClassRooms_Projet7/static/media/banner-IMG-about.4560e2e486a529cb6bf2.jpg",
     "static/media/banner-IMG.jpg": "/OpenClassRooms_Projet7/static/media/banner-IMG.b821a36071d308a1cdeb.jpg",
@@ -15,10 +15,10 @@
     "static/media/forward-arrow.svg": "/OpenClassRooms_Projet7/static/media/forward-arrow.8d9545cb18f67cea4ffddb888aa4dcb0.svg",
     "static/media/empty-star.svg": "/OpenClassRooms_Projet7/static/media/empty-star.7e4ba6032d7d80ecc30aa389973cef95.svg",
     "static/media/full-star.svg": "/OpenClassRooms_Projet7/static/media/full-star.6430150c126a3adf92c132c52c9c7428.svg",
-    "main.8ba45325.js.map": "/OpenClassRooms_Projet7/static/js/main.8ba45325.js.map",
+    "main.72c3e2a9.js.map": "/OpenClassRooms_Projet7/static/js/main.72c3e2a9.js.map",
     "787.0ce615c0.chunk.js.map": "/OpenClassRooms_Projet7/static/js/787.0ce615c0.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.8ba45325.js"
+    "static/js/main.72c3e2a9.js"
   ]
 }
