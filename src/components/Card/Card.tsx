@@ -10,7 +10,7 @@ type Props = {
 const Card = ({ id, title, cover }: Props) => {
     return (
         <Thumb>
-            <Link to={`/OpenClassRooms_Projet7/${id}`}>
+            <Link to={`/Projet_OpenClassrooms_Kasa/${id}`}>
                 <Img
                     src={cover}
                     alt={`image ${title}`}
