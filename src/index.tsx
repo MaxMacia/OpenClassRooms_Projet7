@@ -19,10 +19,10 @@ root.render(
       <GlobalStyle />
       <Header />
       <Routes>
-        <Route path='/OpenClassRooms_Projet7' element={<Home />} />
-        <Route path='/OpenClassRooms_Projet7/:id' element={<Accomodation />} />
-        <Route path='/OpenClassRooms_Projet7/about' element={<About />} />
-        <Route path='/OpenClassRooms_Projet7/*' element={<NotFound />} />
+        <Route path='/Projet_OpenClassrooms_Kasa' element={<Home />} />
+        <Route path='/Projet_OpenClassrooms_Kasa/:id' element={<Accomodation />} />
+        <Route path='/Projet_OpenClassrooms_Kasa/about' element={<About />} />
+        <Route path='/Projet_OpenClassrooms_Kasa/*' element={<NotFound />} />
       </Routes>
       <Footer />
     </Router>
