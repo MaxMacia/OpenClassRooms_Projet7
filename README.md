@@ -1,3 +1,11 @@
+KASA
+
+Kasa, plateforme de location d’appartement, est le sixième projet OpenClassrooms. 
+
+L’objectif était de créer une application front-end avec React. 
+
+Utilisation de React-router-DOM pour le routing. Création de composants réutilisables. Utilisation de la librairie styled-components pour mettre en place les styles CSS. Utilisation de TypeScript. Utilisation de React testing-librairy pour la réalisation de tests unitaires. 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
