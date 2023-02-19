@@ -1,4 +1,4 @@
-KASA
+#KASA
 
 Kasa, plateforme de location d’appartement, est le sixième projet OpenClassrooms. 
 
